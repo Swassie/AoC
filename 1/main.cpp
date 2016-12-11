@@ -23,7 +23,6 @@ int main() {
     while( inputStream >> instruction ) {
         turnDirection = instruction[0];
         steps = static_cast< size_t > ( std::stoi( instruction.substr( 1, std::string::npos ) ) );
-        //std::cout << instruction << "  " << turnDirection << "  " << steps << std::endl;
         if( turnDirection == 'L' ) {
             --direction;
             if( direction == -1 ) {
