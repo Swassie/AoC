@@ -4,18 +4,14 @@
 
 
 #include <vector>
-#include <cstdint>
 #include <cstddef>
 
 class State {
 public:
-	size_t estimateCost() const;
 	std::vector< State > getNeighbours( std::vector< char > &, size_t ) const;
 
 	int x, y;
-	size_t gScore, fScore;
-	uint32_t numbers;
-	//std::vector< uint8_t > numbers;
+	size_t tentativeScore;
 };
 
 
